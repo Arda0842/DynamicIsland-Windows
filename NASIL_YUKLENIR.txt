@@ -1,0 +1,54 @@
+====================================================================
+  DİNAMİK ADA (DYNAMIC ISLAND) - GITHUB'A YÜKLEME REHBERİ
+====================================================================
+
+Bu klasör ("DynamicIsland_GitHub"), GitHub'a yüklemen için tertemiz bir şekilde hazırlandı.
+İçinde kaynak kodlar, modeller, servisler, simge, .gitignore, lisans ve hazır README.md bulunmaktadır.
+
+--------------------------------------------------------------------
+ADIM 1: GITHUB'DA YENİ DEPO (REPOSITORY) AÇMA
+--------------------------------------------------------------------
+1. https://github.com adresine git ve hesabına giriş yap.
+2. Sağ üstteki "+" simgesine tıkla -> "New repository" seç.
+3. Ayarları yap:
+   - Repository name: DynamicIsland-Windows  (veya istediğin bir isim)
+   - Description: Windows için modern, OLED siyahı Dinamik Ada ve Oyuncu Asistanı
+   - Public: Seçili olsun (herkesin görebilmesi için)
+   - "Add a README file" KUTUSUNU BOŞ BIRAK (çünkü biz zaten harika bir README hazırladık).
+   - "Add .gitignore" ve "Choose a license" kısımlarını da "None" bırak.
+4. En alttaki yeşil "Create repository" butonuna bas.
+
+--------------------------------------------------------------------
+ADIM 2: DOSYALARI YÜKLEME (EN KOLAY YÖNTEM - WEB ARAYÜZÜ)
+--------------------------------------------------------------------
+1. Açılan boş repo sayfasında mavi renkle yazan "uploading an existing file" bağlantısına tıkla.
+2. Masaüstündeki bu "DynamicIsland_GitHub" klasörünün içindeki TÜM dosya ve klasörleri seç:
+   (DynamicIsland.csproj, App.xaml, MainWindow.xaml, Models, Services, README.md, LICENSE, .gitignore vb.)
+3. Hepsini tutup tarayıcıdaki kutucuğa sürükleyip bırak.
+4. Dosyalar yüklendikten sonra sayfanın altındaki yeşil "Commit changes" butonuna bas.
+Tebrikler! Projen artık GitHub'da yayında!
+
+--------------------------------------------------------------------
+ALTERNATİF YÖNTEM: GITHUB DESKTOP İLE YÜKLEME (Çok Pratik)
+--------------------------------------------------------------------
+1. https://desktop.github.com adresinden GitHub Desktop'ı indir ve kur.
+2. Programı açıp GitHub hesabınla giriş yap.
+3. Sol üstten "File" -> "Add Local Repository" de.
+4. "Choose..." diyerek Masaüstündeki "DynamicIsland_GitHub" klasörünü seç.
+5. "Create a repository" uyarısı verirse onayla ve ardından sağ üstteki "Publish repository" butonuna bas.
+
+--------------------------------------------------------------------
+ADIM 3: İNSANLARIN PROGRAMI DOĞRUDAN (.EXE) İNDİREBİLMESİ İÇİN (RELEASES)
+--------------------------------------------------------------------
+Kodları yükledikten sonra, insanların programı Visual Studio olmadan doğrudan indirip kullanabilmesi için:
+1. GitHub reponun ana sayfasında sağ menüdeki "Releases" başlığına tıkla.
+2. "Create a new release" (veya "Draft a new release") butonuna bas.
+3. "Choose a tag" kısmına v1.0.0 yaz ve "Create new tag" seç.
+4. Release title kısmına: Dinamik Ada v1.0.0 - Kararlı Taşınabilir Sürüm yaz.
+5. "Attach binaries by dropping them here" yazan kutucuğa:
+   Masaüstündeki "Dosyalar" klasöründe bulunan:
+   - DynamicIsland.exe VEYA
+   - Dinamik_Ada_Diger_Bilgisayar_Icin.zip dosyasını sürükleyip bırak.
+6. Yeşil "Publish release" butonuna bas.
+
+Artık hem kodların açık kaynak olarak GitHub'da duracak, hem de isteyen herkes "Releases" kısmından tek tıkla indirip çalıştırabilecek!

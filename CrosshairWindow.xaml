@@ -1,0 +1,56 @@
+<Window x:Class="DynamicIsland.CrosshairWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gamer Crosshair"
+        Height="48" Width="48"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="{x:Null}"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        WindowStartupLocation="Manual"
+        IsHitTestVisible="False"
+        Focusable="False"
+        SnapsToDevicePixels="True"
+        UseLayoutRounding="True">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <!-- Style 1: Center Dot (Nokta) -->
+        <Grid x:Name="CrossDotView" Visibility="Visible">
+            <Ellipse x:Name="DotOutline" Width="5" Height="5" Fill="#AA000000" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Ellipse x:Name="DotMain" Width="3" Height="3" Fill="#00FF66" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
+        <!-- Style 2: Ring (Halka) -->
+        <Grid x:Name="CrossRingView" Visibility="Collapsed">
+            <Ellipse x:Name="RingOutline" Width="10" Height="10" Stroke="#AA000000" StrokeThickness="2.5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Ellipse x:Name="RingMain" Width="10" Height="10" Stroke="#00FF66" StrokeThickness="1.2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Ellipse x:Name="RingCenterDot" Width="2" Height="2" Fill="#00FF66" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
+        <!-- Style 3: Cross (+) -->
+        <Grid x:Name="CrossPlusView" Visibility="Collapsed" Width="18" Height="18">
+            <!-- Shadow/Outline Lines -->
+            <Line X1="9" Y1="1" X2="9" Y2="6" Stroke="#AA000000" StrokeThickness="2.5"/>
+            <Line X1="9" Y1="12" X2="9" Y2="17" Stroke="#AA000000" StrokeThickness="2.5"/>
+            <Line X1="1" Y1="9" X2="6" Y2="9" Stroke="#AA000000" StrokeThickness="2.5"/>
+            <Line X1="12" Y1="9" X2="17" Y2="9" Stroke="#AA000000" StrokeThickness="2.5"/>
+
+            <!-- Main Colored Lines -->
+            <Line x:Name="LineTop" X1="9" Y1="1" X2="9" Y2="6" Stroke="#00FF66" StrokeThickness="1.2"/>
+            <Line x:Name="LineBottom" X1="9" Y1="12" X2="9" Y2="17" Stroke="#00FF66" StrokeThickness="1.2"/>
+            <Line x:Name="LineLeft" X1="1" Y1="9" X2="6" Y2="9" Stroke="#00FF66" StrokeThickness="1.2"/>
+            <Line x:Name="LineRight" X1="12" Y1="9" X2="17" Y2="9" Stroke="#00FF66" StrokeThickness="1.2"/>
+
+            <!-- Center Micro Dot -->
+            <Ellipse x:Name="PlusCenterDot" Width="2" Height="2" Fill="#00FF66" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
+        <!-- Style 4: Sniper Dot (Glowing Halo Dot) -->
+        <Grid x:Name="CrossSniperView" Visibility="Collapsed">
+            <Ellipse x:Name="SniperGlow" Width="10" Height="10" Fill="#4000FF66" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Ellipse x:Name="SniperOutline" Width="5" Height="5" Fill="#AA000000" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Ellipse x:Name="SniperMain" Width="3" Height="3" Fill="#00FF66" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>
